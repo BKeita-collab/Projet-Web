@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/master/leaflet.css">
+  <link rel="stylesheet" href="enigmes_carte_finale.CSS">
+  <title>Document</title>
+</head>
+<body>
+
+
+<!-- Variable contenant la carte  -->
+<div id="map" style="width:100%; height:400px;"></div>
+ 
+
+<!-- Cette div nous permet de gérer toutes les actions au niveau de l'affichage dans le HTML -->
+<div id = 'all'>
+   
+    <!-- Case à cocher pour afficher l'enigme  -->
+     <div>
+      <input type="checkbox" id="afficher_enigme" name="afficher_enigme"
+      unchecked>
+      <label for="afficher_enigmes">Afficher l'enigme</label>
+    </div>
+    
+    <!-- Je créé l'enigme à partir de la BDD -->
+    <p>
+        <div id = 'enigme_i'></div>
+    </p>
+
+    <p>
+        <div id = 'les_reponses'>
+
+        </div>
+    </p>
+
+    <!-- <img id = 'image' src="" width = '100px' alt=""> -->
+
+
+    <!-- Le texte devant les cases des réponses à cocher -->
+    <p id = 'choix_reponses'></p>
+
+
+
+    <!-- Création du formulaire recueillant la réponse de l'utilisateur entre 1 et 4 -->
+    <form action="#" method = 'get' id = 'form_enigme'>
+      <p>
+          <label>
+          <input id = "recueil_enigme" type = 'number' name = reponse min=1 max=4 style="width:100px"> 
+      </label>
+    </p>
+    </form> 
+    
+    <!-- Validation de la réponse par l'utilisateur  -->
+    <input type="submit" id = "validation" value="OK">
+  
+</div>
+
+
+
+
+
+<script src="http://cdn.leafletjs.com/leaflet/master/leaflet.js"></script>
+<script src="enigmes_carte_finale_v2.JS"></script>
+
+</body>
+</html>
